@@ -95,4 +95,20 @@
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+    <groupId>org.apache.tomcat.maven</groupId>
+    <artifactId>tomcat8-war-runner</artifactId>
+    <version>3.0-r1756463</version>
+				<configuration>
+					<url>http://localhost:10086/0.0.1-SNAPSHOT</url>
+					<path>/</path>
+					<server>tomcat</server>
+					<username>admin</username>
+					<password>admin</password>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
